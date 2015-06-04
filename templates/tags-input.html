@@ -8,9 +8,10 @@
         <ti-tag-item data="::tag"></ti-tag-item>
       </li>
     </ul>
+    edit {{options.editMode}}
     <input class="input"
            autocomplete="off"
-           ng-show="{{editMode}}"
+           ng-show="options.editMode"
            ng-model="newTag.text"
            ng-model-options="{getterSetter: true}"
            ng-keydown="eventHandlers.input.keydown($event)"
