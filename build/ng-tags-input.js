@@ -5,7 +5,7 @@
  * Copyright (c) 2013-2015 Michael Benford
  * License: MIT
  *
- * Generated at 2015-06-03 14:51:41 +0200
+ * Generated at 2015-06-04 10:59:02 +0200
  */
 (function() {
 'use strict';
@@ -184,6 +184,7 @@ tagsInput.directive('tagsInput', ["$timeout", "$document", "$window", "tagsInput
         scope: {
             tags: '=ngModel',
             text: '=?',
+            editMode: '@?',
             onTagAdding: '&',
             onTagAdded: '&',
             onInvalidTag: '&',
@@ -220,8 +221,7 @@ tagsInput.directive('tagsInput', ["$timeout", "$document", "$window", "tagsInput
                 keyProperty: [String, ''],
                 allowLeftoverText: [Boolean, false],
                 addFromAutocompleteOnly: [Boolean, false],
-                spellcheck: [Boolean, true],
-                editMode: [Boolean, true]
+                spellcheck: [Boolean, true]
             });
 
             $scope.tagList = new TagList($scope.options, $scope.events,
